@@ -1,0 +1,29 @@
+<section class="container flex justify-content-center">
+  <div class="py-2 w-75">
+    <h2 class="text-center m-4">Formulario Venta</h2>
+    <div class="flex justify-content-center bg-white rounded">
+      <form  class="form-inline w-50 py-5" #formCliente="ngForm">
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Cliente</label>
+          <select class="form-control" required name="password">
+            <option value="" disabled selected>--Selecione Cliente--</option>
+            <option [value]="client" *ngFor="let client of clients">{{client}}</option>
+          </select>
+        </div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Email</label>
+          <input class="form-control" required name="email"  type="email"  placeholder="Email">
+        </div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Password</label>
+          <textarea class="form-control required resize-none h-10" required name="mensaje" placeholder="Mensaje"></textarea>
+        </div>
+        <input [disabled]="formCliente.invalid" class="btn btn-info text-white font-bold border w-100 mt-3" type="submit" value="Enviar Datos">
+      </form>
+    </div>
+  </div>
+</section>
+
+<app-modal  [Car]="car">
+
+</app-modal>

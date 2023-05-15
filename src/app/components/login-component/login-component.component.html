@@ -1,0 +1,21 @@
+<section class="container flex justify-content-center ">
+  <div class="py-2 w-75">
+    <h2 class="text-center m-4">Iniciar Sesion</h2>
+    <div class="flex justify-content-center bg-white rounded">
+      <form (submit)="onSubmit()" class="form-inline w-50 py-5" #formLogin="ngForm">
+        <div *ngIf="mensajeError!=''" class="alert alert-danger">{{mensajeError}}</div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Email</label>
+          <input class="form-control" required name="email" #email="ngModel" type="email" [(ngModel)]="Login.email" placeholder="Email">
+        </div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Password</label>
+          <input class="form-control" required name="password" #password="ngModel" type="password" [(ngModel)]="Login.password" placeholder="Password">
+        </div>
+
+        <input [disabled]="formLogin.invalid" class="btn btn-info text-white font-bold border w-100 mt-3" type="submit" value="Iniciar Sesión">
+      </form>
+    </div>
+  </div>
+
+</section>

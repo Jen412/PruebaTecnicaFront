@@ -1,0 +1,19 @@
+.bg-gray{
+  background-color: lighten($color: #574b4baf, $amount: 3);
+}
+
+.p-10{
+  padding: 10.3rem;
+}
+
+@media (min-width: 768px) {
+  .p-10{
+    padding: 4.1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .p-10{
+    padding: 1rem;
+  }
+}

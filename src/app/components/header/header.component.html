@@ -1,1 +1,14 @@
-<p>header works!</p>
+<header class="bg-faded bg-info p-3">
+  <h1 class="text-xl-center h1 ">Prueba Tecnica</h1>
+  <div class=" flex flex-row justify-content-end align-items-end w-100 gap-1r">
+    <div class="flex-column" *ngIf="token!=''">
+      <label class="form-label bold">Filtrar por Nombre</label>
+      <form class="flex form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 ml-sm-2" type="submit">Search</button>
+      </form>
+    </div>
+    <button (click)="cerrarSesion()" *ngIf="token!=''" class="btn btn-danger h-25">Cerrar Sesión</button>
+  </div>
+</header>
+
