@@ -1,4 +1,5 @@
-<section class="container flex justify-content-center ">
+<a href="/register" class="btn btn-info text-white"><b>Registrar Usuario</b></a>
+<section class="container flex justify-content-center p-6">
   <div class="py-2 w-75">
     <h2 class="text-center m-4">Iniciar Sesion</h2>
     <div class="flex justify-content-center bg-white rounded">
@@ -13,7 +14,7 @@
           <input class="form-control" required name="password" #password="ngModel" type="password" [(ngModel)]="Login.password" placeholder="Password">
         </div>
 
-        <input [disabled]="formLogin.invalid" class="btn btn-info text-white font-bold border w-100 mt-3" type="submit" value="Iniciar Sesión">
+        <button [disabled]="!formLogin.valid" class="btn btn-info text-white font-bold border w-100 mt-3" type="submit">Iniciar Sesión</button>
       </form>
     </div>
   </div>

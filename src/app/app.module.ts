@@ -12,10 +12,12 @@ import { FormComponentComponent } from './components/form-component/form-compone
 import { HomeComponentComponent } from './components/home-component/home-component.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { RegisterUserComponentComponent } from './components/register-user-component/register-user-component.component';
 const appRoutes:Routes=[
   {path: '', component: LoginComponentComponent},
   {path: 'formModelo', component: FormComponentComponent},
-  {path: 'home', component: HomeComponentComponent}
+  {path: 'home', component: HomeComponentComponent},
+  {path: 'register', component: RegisterUserComponentComponent}
 ];
 
 @NgModule({
@@ -26,7 +28,8 @@ const appRoutes:Routes=[
     FormComponentComponent,
     HomeComponentComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    RegisterUserComponentComponent
   ],
   imports: [
     BrowserModule,

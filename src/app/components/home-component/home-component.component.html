@@ -1,4 +1,14 @@
-<section class="container bg-white">
+<section class="container bg-white rounded">
+  <div class="flex-row pt-3 gap-r">
+    <label class="form-label bold d-block"><b>Filtrar por modelo</b></label>
+    <div class="flex gap-r">
+      <form class="flex form-inline my-2 my-lg-0 w-25 gap-r">
+        <input class="form-control" [(ngModel)]="search" name="search" type="text" placeholder="Buscar" aria-label="Search">
+        <button (click)="filter()" class="btn btn-outline-success my-2 my-sm-0 ml-sm-2" type="submit">Buscar</button>
+      </form>
+      <button class="btn btn-outline-primary" *ngIf="carsOrder===false" (click)="order()" type="button">Ordenar</button>
+    </div>
+  </div>
   <div class="row row-cols-md-3 p-4">
     <div class="card" *ngFor="let car of cars" (click)="onClick(car)">
       <div class="col" [style.background]="car.color">

@@ -18,10 +18,22 @@ export class FormComponentComponent {
     color: ""
   }
   clients: string[] = this.carService.clients;
+  client: string ="";
+  email: string = "";
+  message: string = "";
+
   ngOnInit(){
     if (this.carService.car.color ==="") {
       this.router.navigate(['/home']);
     }
     this.car = this.carService.car;
+  }
+
+  onSubmit(){
+
+  }
+
+  changeEmail(name:string){
+    this.email = name+"@dt-tecnica.com";
   }
 }

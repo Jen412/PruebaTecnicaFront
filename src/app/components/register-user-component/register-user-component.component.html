@@ -1,0 +1,30 @@
+<a href="/" class="btn btn-info text-white"><b>Iniciar Sesión</b></a>
+<section class="container flex justify-content-center p-5">
+  <div class="py-2 w-75">
+    <h2 class="text-center m-4">Registro de Usuario</h2>
+    <div class="flex justify-content-center bg-white rounded">
+      <form (submit)="onSubmit()" class="form-inline w-50 py-5" #formRegister="ngForm">
+        <div *ngIf="mensaje!=''" class="alert alert-success">{{mensaje}}</div>
+        <div *ngIf="mensajeError!=''" class="alert alert-danger">{{mensajeError}}</div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Nombre</label>
+          <input class="form-control" required name="nameR" #nameR="ngModel" type="text" [(ngModel)]="name" placeholder="Nombre">
+        </div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Apellido</label>
+          <input class="form-control" required name="lastnameR" #lastnameR="ngModel" type="text" [(ngModel)]="lastname" placeholder="Apellido">
+        </div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Email</label>
+          <input class="form-control" required name="emailR" #emailR="ngModel" type="email" [(ngModel)]="email" placeholder="Email">
+        </div>
+        <div class="mt-2 w-100">
+          <label class="form-control-label font-bold text-lg my-1">Password</label>
+          <input class="form-control" required name="passwordR" #passwordR="ngModel" type="password" [(ngModel)]="password" placeholder="Password">
+        </div>
+        <button [disabled]="!formRegister.valid" class="btn btn-info text-white font-bold border w-100 mt-3" type="submit"><b>Registrar Usuario</b></button>
+      </form>
+    </div>
+  </div>
+
+</section>

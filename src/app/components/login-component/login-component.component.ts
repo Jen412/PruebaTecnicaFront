@@ -44,8 +44,7 @@ export class LoginComponentComponent {
           this.mensajeError = "";
           this.changeToken(this.response.token);
         }
-      })
-
+      });
   }
 
   ngOnInit(){
@@ -54,7 +53,6 @@ export class LoginComponentComponent {
       this.router.navigate(['/home']);
     }
   }
-
 
   changeToken(token : string) {
     this.comunicationService.sendValue(token);
